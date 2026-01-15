@@ -207,6 +207,7 @@ class AwesomeSnackbarContent extends StatelessWidget {
                       ),
                   ],
                 ),
+                if (showCloseIcon == false) const SizedBox(height: 12),
 
                 /// `message` body text parameter
                 Expanded(
@@ -261,6 +262,7 @@ class AwesomeSnackbarContent extends StatelessWidget {
     ui.BlendMode colorBlendMode,
   ) => color == null ? null : ui.ColorFilter.mode(color, colorBlendMode);
 }
+
 
 
 
