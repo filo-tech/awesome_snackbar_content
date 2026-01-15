@@ -38,6 +38,9 @@ class AwesomeSnackbarContent extends StatelessWidget {
   /// if you want to customize the font style of the message
   final TextStyle? messageTextStyle;
 
+  /// if you want to show/remove close icon
+  final bool showCloseIcon;
+
   const AwesomeSnackbarContent({
     super.key,
     this.color,
@@ -47,6 +50,7 @@ class AwesomeSnackbarContent extends StatelessWidget {
     required this.message,
     required this.contentType,
     this.inMaterialBanner = false,
+    this.showCloseIcon = true;
   });
 
   @override
@@ -184,22 +188,24 @@ class AwesomeSnackbarContent extends StatelessWidget {
                             ),
                       ),
                     ),
-                    IconButton(
-                      onPressed: () {
-                        if (inMaterialBanner) {
-                          ScaffoldMessenger.of(
-                            context,
-                          ).hideCurrentMaterialBanner();
-                          return;
-                        }
-                        ScaffoldMessenger.of(context).hideCurrentSnackBar();
-                      },
-                      icon: Icon(
-                        Icons.close,
-                        color: Colors.white,
-                        size: size.height * 0.022,
+                    if (showCloseIcon == true) {
+                      IconButton(
+                        onPressed: () {
+                          if (inMaterialBanner) {
+                            ScaffoldMessenger.of(
+                              context,
+                            ).hideCurrentMaterialBanner();
+                            return;
+                          }
+                          ScaffoldMessenger.of(context).hideCurrentSnackBar();
+                        },
+                        icon: Icon(
+                          Icons.close,
+                          color: Colors.white,
+                          size: size.height * 0.022,
+                        ),
                       ),
-                    ),
+                    }
                   ],
                 ),
 
@@ -256,3 +262,4 @@ class AwesomeSnackbarContent extends StatelessWidget {
     ui.BlendMode colorBlendMode,
   ) => color == null ? null : ui.ColorFilter.mode(color, colorBlendMode);
 }
+
