@@ -188,7 +188,7 @@ class AwesomeSnackbarContent extends StatelessWidget {
                             ),
                       ),
                     ),
-                    if (showCloseIcon == true) {
+                    if (showCloseIcon == true) 
                       IconButton(
                         onPressed: () {
                           if (inMaterialBanner) {
@@ -205,7 +205,6 @@ class AwesomeSnackbarContent extends StatelessWidget {
                           size: size.height * 0.022,
                         ),
                       ),
-                    }
                   ],
                 ),
 
@@ -262,5 +261,6 @@ class AwesomeSnackbarContent extends StatelessWidget {
     ui.BlendMode colorBlendMode,
   ) => color == null ? null : ui.ColorFilter.mode(color, colorBlendMode);
 }
+
 
 
