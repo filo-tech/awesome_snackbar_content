@@ -50,7 +50,7 @@ class AwesomeSnackbarContent extends StatelessWidget {
     required this.message,
     required this.contentType,
     this.inMaterialBanner = false,
-    this.showCloseIcon = true;
+    this.showCloseIcon = true,
   });
 
   @override
@@ -262,4 +262,5 @@ class AwesomeSnackbarContent extends StatelessWidget {
     ui.BlendMode colorBlendMode,
   ) => color == null ? null : ui.ColorFilter.mode(color, colorBlendMode);
 }
+
 
