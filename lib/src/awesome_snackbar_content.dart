@@ -170,7 +170,7 @@ class AwesomeSnackbarContent extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(height: (showCloseIcon == true) ? 5 : 12),
+                SizedBox(height: (showCloseIcon == true) ? 5 : 20),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -262,6 +262,7 @@ class AwesomeSnackbarContent extends StatelessWidget {
     ui.BlendMode colorBlendMode,
   ) => color == null ? null : ui.ColorFilter.mode(color, colorBlendMode);
 }
+
 
 
 
